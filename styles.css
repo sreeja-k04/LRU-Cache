@@ -1,0 +1,160 @@
+/* White background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff; /* Pure white */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #333;
+}
+
+/* Main container with subtle shadow */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    animation: fadeIn 0.8s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h2 {
+    color: #2c3e50; /* Dark blue-gray */
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f9f9f9; /* Light gray background */
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons */
+button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+}
+
+/* Put button */
+.btn-put {
+    background: #007bff;
+    color: white;
+}
+
+.btn-put:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Get button */
+.btn-get {
+    background: #28a745;
+    color: white;
+}
+
+.btn-get:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Cache state container */
+.cache-state {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px;
+    background: #f9f9f9; /* Light gray background */
+    border-radius: 12px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cache items */
+.cache-item {
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(0, 123, 255, 0.1);
+    text-align: center;
+    min-width: 60px;
+    font-weight: 500;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    color: #007bff;
+}
+
+/* Least Recently Used (LRU) item */
+.least-recent {
+    background: #28a745;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Output text */
+.output {
+    margin-top: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for cache items */
+.cache-item:hover {
+    transform: scale(1.05);
+    background: rgba(0, 123, 255, 0.2);
+}
+
+/* Scrollbar styling for cache state container */
+.cache-state::-webkit-scrollbar {
+    height: 6px;
+}
+
+.cache-state::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.cache-state::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
